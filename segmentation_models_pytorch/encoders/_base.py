@@ -17,7 +17,7 @@ class EncoderMixin:
     @property
     def out_channels(self):
         """Return channels dimensions for each tensor of forward output of encoder"""
-        return self._out_channels[: self._depth + 1]
+        return self._out_channels[: int(self._depth) + 1]
 
     @property
     def output_stride(self):
